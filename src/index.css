@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F8FAF9;
+    --card-bg: #FFFFFF;
+    --sage-light: #E8F0EC;
+    --sage-subtle: #F2F7F4;
+    --forest-green: #1E3F20;
+    --forest-deep: #162E18;
+    --slate-text: #64748B;
+    --slate-dark: #1E293B;
+    --sand-accent: #F4EFE6;
+    --sand-border: #E5E1D8;
+    --accent-emerald: #059669;
+    --accent-amber: #D97706;
+    --accent-indigo: #4F46E5;
+  }
+
+  body {
+    background-color: #F8FAF9;
+    color: #1E293B;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Utility badge & glow animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { height: 6px; }
+  50% { height: 28px; }
+}
+
+.audio-bar-1 { animation: wave 1.2s ease-in-out infinite; }
+.audio-bar-2 { animation: wave 1.2s ease-in-out infinite 0.2s; }
+.audio-bar-3 { animation: wave 1.2s ease-in-out infinite 0.4s; }
+.audio-bar-4 { animation: wave 1.2s ease-in-out infinite 0.1s; }
+.audio-bar-5 { animation: wave 1.2s ease-in-out infinite 0.3s; }
+
